@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_back_color"
+    android:orientation="vertical"
+    tools:context=".ui.UpdateActivity">
+
+    <com.qing.tewang.widget.SmartTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:smartTitleBarTitleText="账户升级" />
+
+
+    <RelativeLayout
+        android:id="@+id/business_enter"
+        style="@style/CommonLayoutStyle"
+        android:layout_marginTop="12dp">
+
+
+        <ImageView
+            android:id="@+id/two_left"
+            android:layout_width="18dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:src="@mipmap/my_credit"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_toRightOf="@+id/two_left"
+            android:gravity="center_vertical"
+            android:text="商户入驻"
+            android:textColor="#333333"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:drawableRight="@mipmap/drawable_text_right"
+            android:drawablePadding="6dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/main_blue"
+            android:textSize="14sp"
+            tools:text="" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/main_line_color" />
+
+
+    <RelativeLayout
+        android:id="@+id/employee_enter"
+        style="@style/CommonLayoutStyle">
+
+
+        <ImageView
+            android:id="@+id/three_left"
+            android:layout_width="18dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:src="@mipmap/my_credit"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_toRightOf="@+id/three_left"
+            android:gravity="center_vertical"
+            android:text="信息专员申请"
+            android:textColor="#333333"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:drawableRight="@mipmap/drawable_text_right"
+            android:drawablePadding="6dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/main_blue"
+            android:textSize="14sp"
+            tools:text="" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <declare-styleable name="SmartTitleBar" tools:ignore="ResourceName">
+        <attr name="smartTitleBarTitleText" format="string" />
+        <attr name="smartTitleBarRightText" format="string" />
+        <attr name="smartTitleBarLeftResource" format="reference" />
+        <attr name="smartTitleBarRightResource" format="reference" />
+        <attr name="smartTitleBarTitleBackground" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="StrokeColorText" tools:ignore="ResourceName">
+        <attr name="strokeColorRadius" format="dimension" />
+        <attr name="strokeViewColor" format="color" />
+        <attr name="strokeTextColor" format="color" />
+        <attr name="strokeColorTextSize" format="dimension" />
+        <attr name="strokeColorText" format="string" />
+        <attr name="strokeColorIsFill" format="boolean" />
+        <attr name="strokeColorStrokeWidth" format="integer" />
+    </declare-styleable>
+
+
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ViewPagerIndicator">
+        <!-- Style of the circle indicator. -->
+        <attr name="vpiCirclePageIndicatorStyle" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="CirclePageIndicator">
+        <attr name="centered" format="boolean" />
+        <attr name="fillColor" format="color" />
+        <attr name="pageColor" format="color" />
+        <attr name="android:orientation" />
+        <attr name="radius" format="dimension" />
+        <attr name="snap" format="boolean" />
+        <attr name="strokeColor" format="color" />
+        <attr name="strokeWidth" format="dimension" />
+        <attr name="android:background" />
+    </declare-styleable>
+    <declare-styleable name="TitleBarView">
+        <attr name="titleBarTitleText" format="string" />
+        <attr name="titleBarRightText" format="string" />
+        <attr name="titleBarLeftResource" format="reference" />
+        <attr name="titleBarRightResource" format="reference" />
+        <attr name="titleBarTitleBackground" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="FlexibleRatingBar">
+        <attr name="colorOutlineOn" format="color" />
+        <attr name="colorOutlineOff" format="color" />
+        <attr name="colorOutlinePressed" format="color" />
+        <attr name="colorFillOn" format="color" />
+        <attr name="colorFillOff" format="color" />
+        <attr name="colorFillPressedOn" format="color" />
+        <attr name="colorFillPressedOff" format="color" />
+        <attr name="polygonVertices" format="integer" />
+        <attr name="polygonRotation" format="integer" />
+        <attr name="flexibleStrokeWidth" format="dimension" />
+        <attr name="isHide" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="slideswitch">
+        <attr name="themeColor" format="color" />
+        <attr name="isOpen" format="boolean" />
+        <attr name="shape">
+            <enum name="rect" value="1" />
+            <enum name="circle" value="2" />
+        </attr>
+    </declare-styleable>
+
+</resources>

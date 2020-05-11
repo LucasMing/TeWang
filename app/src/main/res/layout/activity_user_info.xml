@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/main_back_color"
+    tools:context=".ui.UserInfoActivity">
+
+    <com.qing.tewang.widget.SmartTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:smartTitleBarRightText="保存"
+        app:smartTitleBarTitleText="修改名字" />
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_layout_height"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="76dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:text="名字"
+            android:textColor="#999999"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/name_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/view_horizontal_margin"
+            android:background="@null"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:textColor="#666666"
+            android:textColorHint="#cccccc"
+            android:textCursorDrawable="@drawable/cursor_color"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+</LinearLayout>

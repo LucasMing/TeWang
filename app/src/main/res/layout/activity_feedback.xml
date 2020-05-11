@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".ui.FeedbackActivity">
+
+    <com.qing.tewang.widget.SmartTitleBar
+        android:id="@+id/title_bar"
+        app:smartTitleBarTitleText="用户反馈"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <View
+        android:id="@+id/line"
+        android:layout_below="@+id/title_bar"
+        android:background="@color/main_back_color"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/send_message_layout"
+        android:layout_below="@+id/line"
+        android:clipToPadding="false"
+        android:divider="@null"
+        android:paddingTop="8dp" />
+
+    <LinearLayout
+        android:id="@+id/send_message_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="#f5f5f5"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/et_message"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:layout_marginStart="@dimen/view_horizontal_margin"
+            android:layout_marginEnd="@dimen/view_horizontal_margin"
+            android:background="@drawable/feedback_edit_bg"
+            android:inputType="text" />
+
+        <ImageButton
+            android:id="@+id/btn_send"
+            android:layout_marginRight="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#f5f5f5"
+            android:src="@android:drawable/ic_menu_send" />
+    </LinearLayout>
+
+</RelativeLayout>

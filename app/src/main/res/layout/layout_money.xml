@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    android:orientation="horizontal">
+
+
+    <com.ruffian.library.widget.RTextView
+        app:background_normal="#ffebee"
+        app:border_color_normal="#f448b1"
+        app:corner_radius="2dp"
+        android:layout_width="42dp"
+        android:layout_height="22dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center"
+        android:text="红包"
+        android:textColor="#f44336"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/red_packet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="收听可领取5元红包"
+        android:textColor="#f44336" />
+
+
+</LinearLayout>
+

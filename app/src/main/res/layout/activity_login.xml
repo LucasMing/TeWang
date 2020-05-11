@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ui.LoginActivity">
+
+    <com.qing.tewang.widget.SmartTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:smartTitleBarTitleText="登录" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:background="@color/main_line_color" />
+
+    <EditText
+        android:id="@+id/user_phone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_layout_height"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/gray_edit_bg"
+        android:drawableLeft="@mipmap/login_name"
+        android:drawablePadding="@dimen/view_horizontal_margin"
+        android:hint="请输入手机号"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:paddingLeft="@dimen/view_horizontal_margin"
+        android:textColor="#333333"
+        android:textColorHint="#999999"
+        android:textCursorDrawable="@drawable/cursor_color"
+        android:textSize="16sp" />
+
+
+    <EditText
+        android:id="@+id/user_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_layout_height"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:background="@drawable/gray_edit_bg"
+        android:drawableLeft="@mipmap/login_pwd"
+        android:drawablePadding="@dimen/view_horizontal_margin"
+        android:hint="请输入密码（最短8位）"
+        android:inputType="textPassword"
+        android:paddingLeft="@dimen/view_horizontal_margin"
+        android:textColor="#333333"
+        android:textColorHint="#999999"
+        android:textCursorDrawable="@drawable/cursor_color"
+        android:textSize="16sp" />
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="注册"
+            android:textColor="@color/main_blue"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/forget_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:text="忘记密码"
+            android:textColor="@color/main_blue"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/login"
+        style="@style/AccountButtonStyle"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:text="登录"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_pwd" />
+
+
+</LinearLayout>

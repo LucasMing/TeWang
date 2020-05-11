@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@mipmap/account_icon"
+            android:title="账户余额" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@mipmap/upgrade_icon"
+            android:title="账户升级" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@mipmap/collect_icon"
+            android:title="我的收藏" />
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@mipmap/setting_icon"
+            android:title="设置" />
+    </group>
+
+
+</menu>

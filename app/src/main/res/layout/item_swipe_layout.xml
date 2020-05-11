@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp">
+
+    <com.ruffian.library.widget.RLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:border_color_normal="#ff0000"
+        app:corner_radius="12dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="220dp">
+
+            <com.ruffian.library.widget.RImageView
+                android:id="@+id/shop_image"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                app:corner_radius_top_left="12dp"
+                app:corner_radius_top_right="12dp"
+                app:icon_src_normal="@mipmap/timg" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#33000000" />
+
+            <ImageView
+                android:id="@+id/media_control"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/media_pause"
+                android:visibility="gone"
+                android:tint="@color/white" />
+
+            <com.qing.tewang.widget.ProgressView
+                android:id="@+id/media_player"
+                android:layout_gravity="center"
+                android:layout_centerInParent="true"
+                android:layout_width="82dp"
+                android:layout_height="82dp" />
+
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_below="@+id/media_player"
+                android:textColor="@color/white"
+                android:text="00:00"
+                android:layout_marginTop="6dp"
+                android:textSize="18sp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/name"
+            android:text="美好酒店(上海虹桥店)"
+            android:textColor="#333333"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" />
+
+        <include layout="@layout/layout_money"/>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@color/main_line_color"/>
+
+
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:gravity="left"
+            android:maxLines="6"
+            android:minLines="6"
+            android:text="阿里巴巴网络技术有限公司（简称：阿里巴巴集团）是以曾担任英语教师的马云为首的18人于1999年在浙江杭州创立。阿里巴巴集团经营多项业务，另外也从关联公司的业务和服务中取得经营商业生态系统上的支援。业务和关联公司的业务包括：淘宝网、天猫、聚划算、全球速卖通、阿里巴巴国际交易市场、1688、阿"
+            android:textColor="#666666"
+            android:textSize="16sp" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="8dp"
+                android:drawableLeft="@mipmap/icon_address"
+                android:drawablePadding="4dp"
+                android:drawableStart="@mipmap/icon_address"
+                android:text="距离您500m"
+                android:textColor="#666666"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/load_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="12dp"
+                android:drawablePadding="4dp"
+                android:drawableRight="@mipmap/drawable_text_right"
+                android:text="查看详情"
+                android:textColor="#666666"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+
+    </com.ruffian.library.widget.RLinearLayout>
+</android.support.v7.widget.CardView>
+

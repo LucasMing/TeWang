@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_back_color"
+    android:orientation="vertical"
+    tools:context=".ui.TagActivity">
+
+    <com.qing.tewang.widget.SmartTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:smartTitleBarRightText="确定"
+        app:smartTitleBarTitleText="选择标签" />
+
+    <com.zhy.view.flowlayout.TagFlowLayout
+        android:id="@+id/tag_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/view_horizontal_margin"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp"
+        android:paddingTop="@dimen/view_horizontal_margin"
+        app:max_select="-1" />
+
+</LinearLayout>

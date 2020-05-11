@@ -1,0 +1,29 @@
+[
+        {
+            "distance":"741193.4342966602",
+            "url":"http://media.vlean.xyz/201811/rORu8m3S0awYmFKDDMn6DwwYWCcrXPeYpUSKca0u.wav",
+            "voice_id":"155",
+            "is_award":"1",
+            "award_money":"30",
+            "red_packet_money":11,
+            "shop_id":"128",
+            "shop_name":"遂平县茂盛家庭农场～葡萄，葡萄苗",
+            "description":"国昌葡萄～最香甜的葡萄！",
+            "img":[
+                "http://media.vlean.xyz/201811/d2YcUoO7vLt5ztkupYt9Fip9HgNpdGnly7X0Bdfj.png",
+                "http://media.vlean.xyz/201811/DBK6ZAA1w2QY7RgIFubMEWA9krWikKULOYU4kqZ6.png",
+                "http://media.vlean.xyz/201811/fIaAycQ3qdP4HzcEkC5hLmWUkc1iUAzpOvEEugoW.png"
+            ],
+            "address":"河南驻马店遂平县阳风镇肖庄村耿庄",
+            "voice_sn":"yEclsr9G2S13RDUR",
+            "tags":[
+
+            ],
+            "shareTitle":"遂平县茂盛家庭农场～葡萄，葡萄苗",
+            "shareDesc":"国昌葡萄～最香甜的葡萄！",
+            "shareImg":"http://media.vlean.xyz/201811/d2YcUoO7vLt5ztkupYt9Fip9HgNpdGnly7X0Bdfj.png",
+            "shopUrl":"http://tw.vlean.xyz/shop/128",
+            "shareUrl":"http://tw.vlean.xyz/shop/128",
+            "is_collect":0
+        }
+]

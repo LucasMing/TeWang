@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.ForgetPwdOneActivity">
+
+    <com.qing.tewang.widget.SmartTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:smartTitleBarTitleText="忘记密码" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:background="@color/main_line_color" />
+
+    <EditText
+        android:id="@+id/user_phone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_layout_height"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/gray_edit_bg"
+        android:drawablePadding="@dimen/view_horizontal_margin"
+        android:drawableLeft="@drawable/register_name"
+        android:drawableTint="#cccccc"
+        android:hint="请输入手机号"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:paddingLeft="@dimen/view_horizontal_margin"
+        android:textColor="#333333"
+        android:textColorHint="#999999"
+        android:textCursorDrawable="@drawable/cursor_color"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="22dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/user_token"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:background="@drawable/gray_edit_bg"
+            android:drawableLeft="@drawable/register_code"
+            android:drawablePadding="10dp"
+            android:drawableTint="#cccccc"
+            android:hint="请输入验证码"
+            android:inputType="number"
+            android:maxEms="6"
+            android:paddingLeft="10dp"
+            android:paddingStart="@dimen/view_horizontal_margin"
+            android:singleLine="true"
+            android:textColor="#333333"
+            android:textColorHint="#999999"
+            android:textCursorDrawable="@drawable/cursor_color"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/get_code"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginLeft="16dp"
+            android:gravity="center"
+            android:minWidth="100dp"
+            android:text="获取验证码"
+            android:textColor="#333333"
+            android:textSize="13sp" />
+
+
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/user_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_layout_height"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:background="@drawable/gray_edit_bg"
+        android:drawablePadding="@dimen/view_horizontal_margin"
+        android:drawableLeft="@drawable/register_pwd"
+        android:drawableTint="#cccccc"
+        android:hint="请输入新密码"
+        android:inputType="textPassword"
+        android:paddingLeft="@dimen/view_horizontal_margin"
+        android:textColor="#333333"
+        android:textColorHint="#999999"
+        android:textCursorDrawable="@drawable/cursor_color"
+        android:textSize="16sp" />
+
+
+    <Button
+        android:id="@+id/register"
+        style="@style/AccountButtonStyle"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:text="确定"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_pwd" />
+
+
+</LinearLayout>

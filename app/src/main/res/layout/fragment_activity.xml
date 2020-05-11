@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_back_color"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/status_bar_height"
+        android:background="@color/white" />
+
+    <com.qing.tewang.widget.SmartTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:smartTitleBarTitleText="录制活动" />
+
+
+    <com.qing.tewang.widget.refresh.NewSwipeRefreshLayout
+        android:id="@+id/swipe_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="32dp">
+
+                <include layout="@layout/empty_voice_view" />
+            </FrameLayout>
+
+            <com.qing.tewang.widget.MyStack
+                android:id="@+id/swipeStack"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:paddingBottom="32dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="16dp"
+                app:swipe_opacity="10"
+                app:scale_factor="0.95"
+                app:stack_rotation="0"
+                app:stack_spacing="24dp" />
+
+            <ImageView
+                android:id="@+id/next"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="62dp"
+                android:background="@drawable/close_bg"
+                android:padding="8dp"
+                android:src="@drawable/close"
+                android:tint="@color/price_red" />
+
+        </FrameLayout>
+
+    </com.qing.tewang.widget.refresh.NewSwipeRefreshLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_back_color"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/status_bar_height"
+        android:background="@color/white" />
+
+    <com.qing.tewang.widget.SmartTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:smartTitleBarRightText="刷新"
+        app:smartTitleBarTitleText="出行语音" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:background="#fefcec"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="12dp"
+            android:layout_marginLeft="8dp"
+            android:visibility="gone"
+            android:src="@mipmap/broadcast_icon" />
+        <TextView
+            android:layout_marginRight="12dp"
+            android:layout_marginLeft="8dp"
+            android:textColor="#000000"
+            android:text="置顶语音"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <com.superluo.textbannerlibrary.TextBannerView
+            android:id="@+id/tv_banner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fefcec"
+            app:setDirection="bottom_to_top"
+            app:setGravity="left"
+            app:setTextColor="#ea6f5a" />
+    </LinearLayout>
+
+
+    <com.qing.tewang.widget.refresh.SwipeRefreshListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
