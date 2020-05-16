@@ -33,6 +33,7 @@ import com.qing.tewang.fragment.BaseFragment;
 import com.qing.tewang.fragment.MessageFragment;
 import com.qing.tewang.fragment.MyFragment;
 import com.qing.tewang.fragment.NewVoiceFragment;
+import com.qing.tewang.fragment.TogetherFragment;
 import com.qing.tewang.model.CommonData;
 import com.qing.tewang.model.Location;
 import com.qing.tewang.model.MessageResult;
@@ -64,7 +65,7 @@ public class MainActivity extends BaseActivity implements EasyPermissions.Permis
 
 
     private List<Class<? extends BaseFragment>> fragmentClasses =
-            Arrays.asList(NewVoiceFragment.class, MessageFragment.class, MyFragment.class, ActivityFragment.class);
+            Arrays.asList(TogetherFragment.class,NewVoiceFragment.class, MessageFragment.class, MyFragment.class, ActivityFragment.class);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -110,18 +111,11 @@ public class MainActivity extends BaseActivity implements EasyPermissions.Permis
 
 
         mBottomBar.setOnTabSelectListener(tabId -> {
-            if (tabId == R.id.tab_location) {
+            if (tabId == R.id.tab_first) {
                 showTab(0);
-            } else if (tabId == R.id.tab_message) {
-                if (SPUtils.isLogin(getApplicationContext())) {
-                    showTab(1);
-                } else {
-                    mBottomBar.selectTabAtPosition(0);
-                    Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-                    startActivity(intent);
-                }
-            } else if (tabId == R.id.tab_me) {
-
+            }else if(tabId == R.id.tab_location){
+                showTab(1);
+            }else if (tabId == R.id.tab_message) {
                 if (SPUtils.isLogin(getApplicationContext())) {
                     showTab(2);
                 } else {
@@ -129,9 +123,18 @@ public class MainActivity extends BaseActivity implements EasyPermissions.Permis
                     Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                     startActivity(intent);
                 }
-            } else if (tabId == R.id.tab_record) {
+            }else if (tabId == R.id.tab_me) {
+                if (SPUtils.isLogin(getApplicationContext())) {
+                    showTab(3);
+                } else {
+                    mBottomBar.selectTabAtPosition(0);
+                    Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                    startActivity(intent);
+                }
+            }else if (tabId == R.id.tab_record) {
                 showTab(3);
             }
+
         });
 
         showTab(mCurrentTab);
@@ -222,6 +225,8 @@ public class MainActivity extends BaseActivity implements EasyPermissions.Permis
                 DisplayUtils.getInstance().dp2px(getApplicationContext(), 34),
                 DisplayUtils.getInstance().dp2px(getApplicationContext(), 34));
 
+        AppCompatImageView first = bottomBar.findViewById(R.id.tab_first).findViewById(R.id.bb_bottom_bar_icon);
+        first.setLayoutParams(params);
         AppCompatImageView location = bottomBar.findViewById(R.id.tab_location).findViewById(R.id.bb_bottom_bar_icon);
         location.setLayoutParams(params);
         AppCompatImageView record = bottomBar.findViewById(R.id.tab_record).findViewById(R.id.bb_bottom_bar_icon);

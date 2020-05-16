@@ -1,6 +1,10 @@
 <tabs>
     <tab
         icon="@drawable/home_location0"
+        id="@+id/tab_first"
+        title="首页" />
+    <tab
+        icon="@drawable/home_location0"
         id="@+id/tab_location"
         title="出行语音" />
     <tab
