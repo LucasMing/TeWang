@@ -13,4 +13,6 @@
     <color name="main_line_color">#e6e6e6</color>
     <color name="main_orange">#ea6f5a</color>
     <color name="main_text_black_color">#333333</color>
+    <color name="mainColor_red">#cb2519</color>
+    <color name="color_999">#999999</color>
 </resources>
