@@ -44,6 +44,7 @@ import com.qing.tewang.util.SPUtils;
 import com.roughike.bottombar.BadgeContainer;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.BottomBarTab;
+import com.roughike.bottombar.TabSelectionInterceptor;
 import com.tencent.bugly.beta.Beta;
 
 import java.lang.ref.WeakReference;
@@ -62,7 +63,6 @@ public class MainActivity extends BaseActivity implements EasyPermissions.Permis
     private TextView mMoney, mNumber;
     private View mRedPacket;
     private BottomBar mBottomBar;
-
 
     private List<Class<? extends BaseFragment>> fragmentClasses =
             Arrays.asList(TogetherFragment.class,NewVoiceFragment.class, MessageFragment.class, MyFragment.class, ActivityFragment.class);
@@ -108,7 +108,19 @@ public class MainActivity extends BaseActivity implements EasyPermissions.Permis
                         .commitAllowingStateLoss();
             }
         }
-
+        mBottomBar.setTabSelectionInterceptor(new TabSelectionInterceptor() {
+            @Override
+            public boolean shouldInterceptTabSelection(int oldTabId, int newTabId) {
+                if(newTabId == R.id.tab_message || newTabId == R.id.tab_me){
+                    if(!SPUtils.isLogin(getApplicationContext())){
+                        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                        startActivity(intent);
+                        return true;
+                    }
+                }
+                return false;
+            }
+        });
 
         mBottomBar.setOnTabSelectListener(tabId -> {
             if (tabId == R.id.tab_first) {
@@ -117,24 +129,15 @@ public class MainActivity extends BaseActivity implements EasyPermissions.Permis
                 showTab(1);
             }else if (tabId == R.id.tab_message) {
                 if (SPUtils.isLogin(getApplicationContext())) {
-                    showTab(2);
-                } else {
-                    mBottomBar.selectTabAtPosition(0);
-                    Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-                    startActivity(intent);
+                    showTab(3);
                 }
             }else if (tabId == R.id.tab_me) {
                 if (SPUtils.isLogin(getApplicationContext())) {
-                    showTab(3);
-                } else {
-                    mBottomBar.selectTabAtPosition(0);
-                    Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-                    startActivity(intent);
+                    showTab(4);
                 }
             }else if (tabId == R.id.tab_record) {
-                showTab(3);
+                showTab(2);
             }
-
         });
 
         showTab(mCurrentTab);
@@ -440,8 +443,6 @@ public class MainActivity extends BaseActivity implements EasyPermissions.Permis
             savedInstanceState = null;
         }
     }
-
-
 
 
 }
