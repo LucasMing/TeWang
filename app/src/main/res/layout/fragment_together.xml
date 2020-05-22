@@ -1,142 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/root_ll"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <RelativeLayout
+    <LinearLayout
+        android:id="@+id/root_ll"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:background="@color/mainColor_red">
-
-        <TextView
-            android:id="@+id/search_cancel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="15dp"
-            android:text="更多"
-            android:textColor="@color/white"
-            android:textSize="15sp" />
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/status_bar_height_layout">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="6dp"
-            android:layout_marginRight="12dp"
-            android:layout_marginBottom="6dp"
-            android:layout_toLeftOf="@id/search_cancel"
-            android:background="@drawable/search_bg"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:layout_height="45dp"
+            android:background="@color/mainColor_red">
 
-            <ImageView
-                android:id="@+id/do_search_iv"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="10dp"
-                android:padding="4dp"
-                android:src="@mipmap/ic_search_et" />
-
-            <ImageView
-                android:id="@+id/search_clear"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+            <TextView
+                android:id="@+id/search_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:layout_marginRight="12dp"
-                android:padding="4dp"
-                android:src="@mipmap/ic_clear"
-                android:visibility="invisible" />
+                android:layout_marginRight="15dp"
+                android:text="更多"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
 
-            <EditText
-                android:id="@+id/search_header_et"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
                 android:layout_marginTop="6dp"
+                android:layout_marginRight="12dp"
                 android:layout_marginBottom="6dp"
-                android:layout_toLeftOf="@id/search_clear"
-                android:layout_toRightOf="@id/do_search_iv"
+                android:layout_toLeftOf="@id/search_cancel"
                 android:background="@drawable/search_bg"
-                android:hint="超市"
-                android:imeOptions="actionSearch"
-                android:inputType="text"
-                android:paddingLeft="8dp"
-                android:textColor="@color/color_999"
-                android:textCursorDrawable="@drawable/et_color_cursor"
-                android:textSize="14sp" />
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/do_search_iv"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:padding="4dp"
+                    android:src="@mipmap/ic_search_et" />
+
+                <ImageView
+                    android:id="@+id/search_clear"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:padding="4dp"
+                    android:src="@mipmap/ic_clear"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@+id/search_header_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_toLeftOf="@id/search_clear"
+                    android:layout_toRightOf="@id/do_search_iv"
+                    android:background="@drawable/search_bg"
+                    android:hint="超市"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:paddingLeft="8dp"
+                    android:textColor="@color/color_999"
+                    android:textCursorDrawable="@drawable/et_color_cursor"
+                    android:textSize="14sp" />
+            </RelativeLayout>
         </RelativeLayout>
-    </RelativeLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="47dp"
-        android:paddingLeft="12dp"
-        android:paddingRight="12dp"
-        android:background="@color/mainColor_red">
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:background="@color/mainColor_red"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="12dp">
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textColor="@color/mainColor_red"
-            android:layout_gravity="center_vertical"
-            android:padding="3dp"
-            android:gravity="center"
-            android:background="@drawable/bg_round_8dp_fff"
-            android:text="金砖助手"/>
+            <RadioButton
+                android:id="@+id/rb_jzzs"
+                style="@style/main_switch"
+                android:background="@drawable/main_switch_buttion"
+                android:text="金砖助手"
+                android:textColor="@drawable/main_switch_color" />
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="12dp"
-            android:textColor="@color/white"
-            android:layout_gravity="center_vertical"
-            android:padding="3dp"
-            android:gravity="center"
-            android:background="@drawable/border_8dp_fff"
-            android:text="我的收藏"/>
+            <RadioButton
+                android:id="@+id/rb_wdsc"
+                style="@style/main_switch"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/main_switch_buttion"
+                android:text="我的收藏"
+                android:textColor="@drawable/main_switch_color" />
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="12dp"
-            android:textColor="@color/white"
-            android:layout_gravity="center_vertical"
-            android:padding="3dp"
-            android:gravity="center"
-            android:background="@drawable/border_8dp_fff"
-            android:text="全网助手"/>
+            <RadioButton
+                android:id="@+id/rb_qwzs"
+                style="@style/main_switch"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/main_switch_buttion"
+                android:text="全网助手"
+                android:textColor="@drawable/main_switch_color" />
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="12dp"
-            android:textColor="@color/white"
-            android:layout_gravity="center_vertical"
-            android:padding="3dp"
-            android:gravity="center"
-            android:background="@drawable/border_8dp_fff"
-            android:text="123圈粉"/>
+            <RadioButton
+                android:id="@+id/rb_qf"
+                style="@style/main_switch"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/main_switch_buttion"
+                android:text="123圈粉"
+                android:textColor="@drawable/main_switch_color" />
+
+        </RadioGroup>
+
+        <com.qing.tewang.widget.BannerLayout
+            android:id="@+id/banner_ad"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:layout_margin="12dp"
+            android:background="@drawable/bg_home_successful">
+
+        </com.qing.tewang.widget.BannerLayout>
+
+        <FrameLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7.5">
+        </FrameLayout>
 
     </LinearLayout>
-    
-    <com.qing.tewang.widget.BannerLayout
-        android:id="@+id/banner_ad"
-        android:layout_width="match_parent"
-        android:layout_height="68dp"
-        android:layout_margin="12dp"
-        android:background="@drawable/bg_home_successful">
 
-    </com.qing.tewang.widget.BannerLayout>
-
-</LinearLayout>
+    <ImageView
+        android:id="@+id/float_button"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|end"
+        android:layout_marginRight="-15dp"
+        android:src="@drawable/close" />
+</FrameLayout>
