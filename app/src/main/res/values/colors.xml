@@ -15,4 +15,12 @@
     <color name="main_text_black_color">#333333</color>
     <color name="mainColor_red">#cb2519</color>
     <color name="color_999">#999999</color>
+    <color name="color_red">#f95a56</color>
+    <color name="color_green">#42cdb8</color>
+    <color name="color_blue">#3c82fe</color>
+    <color name="color_purple">#cc8bff</color>
+    <color name="color_fef2e6">#fef2e6</color>
+    <color name="color_e8f5fe">#e8f5fe</color>
+    <color name="color_e1faf6">#e1faf6</color>
+    <color name="color_f7effe">#f7effe</color>
 </resources>
