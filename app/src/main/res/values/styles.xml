@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -6,7 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
         <item name="alertDialogTheme">@style/Theme.AppCompat.Light.Dialog.Alert.Self</item>
     </style>
 
@@ -14,7 +14,7 @@
     <style name="FullScreenTheme" parent="AppTheme">
         <!--<item name="android:windowFullscreen">true</item>-->
         <item name="colorPrimaryDark">@android:color/transparent</item>
-        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
         <item name="alertDialogTheme">@style/Theme.AppCompat.Light.Dialog.Alert.Self</item>
         <!--<item name="android:windowTranslucentStatus">true</item>-->
         <!--<item name="android:background">@mipmap/test_bg</item>-->
@@ -65,8 +65,8 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:background">@drawable/blue_button_selector</item>
         <item name="android:textSize">16sp</item>
-        <item name="android:layout_marginEnd">@dimen/activity_horizontal_margin</item>
-        <item name="android:layout_marginStart">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginEnd" tools:ignore="NewApi">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginStart" tools:ignore="NewApi">@dimen/activity_horizontal_margin</item>
     </style>
 
     <style name="CommonLayoutStyle">
