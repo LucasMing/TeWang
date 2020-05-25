@@ -1,14 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <com.qing.tewang.widget.BannerLayout
+        android:id="@+id/banner_ad"
+        android:layout_width="match_parent"
+        android:layout_height="108dp"
+        android:layout_margin="12dp"
+        android:background="@drawable/bg_home_successful" />
+
+    <com.qing.tewang.widget.NoScrollGridView
+        android:id="@+id/my_grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="5" />
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="horizontal">
 
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!--百家汇-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/together_grid_height"
+                android:background="@drawable/bg_round_business_red"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="Suspicious0dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@mipmap/aar_ic_check" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="百家汇"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!--洗浴-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/together_grid_height"
+                android:background="@drawable/bg_round_business_blue"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="Suspicious0dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@mipmap/aar_ic_check" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="洗浴"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!--电子-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/together_grid_height"
+                android:background="@drawable/bg_round_business_green"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="Suspicious0dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@mipmap/aar_ic_check" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="电子"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!--山水-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/together_grid_height"
+                android:background="@drawable/bg_round_business_purple"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="Suspicious0dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@mipmap/aar_ic_check" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="山水"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.qing.tewang.widget.NoScrollGridView
+            android:id="@+id/my_bottom_grid"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:numColumns="4" />
+    </LinearLayout>
 </LinearLayout>
